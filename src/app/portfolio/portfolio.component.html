@@ -1,0 +1,17 @@
+<section class="pt-5">
+    <div class="container mt-5 py-5 ">
+        <h2 class="title text-center text-uppercase">portfolio component</h2>
+        <p class="text-center position-relative star"><i class="fa-solid fa-star"></i></p>
+        <div class="row g-3">
+            @for (img of images; track $index) {
+                <div class="col-lg-4 col-md-6">
+                    <picture class="img-bg w-100 d-block ">
+                        <span class="position-absolute plus-style"><i class="fa-solid fa-plus text-white"></i></span>
+                        <img class="rounded-3 w-100" [src]="img" alt="">
+                    </picture>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
