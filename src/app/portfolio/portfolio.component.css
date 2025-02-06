@@ -1,0 +1,67 @@
+.title{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2C3E50;
+}
+
+.star::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 52%;
+    height: 5px;
+    width: 100px;
+    background-color: #2C3E50;
+}
+.star{
+    color: #2C3E50;
+}
+.star::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    height: 5px;
+    width: 100px;
+    background-color: #2C3E50;
+}
+.text{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #2C3E50;
+}
+.img-bg{
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+}
+.img-bg::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    background-color: #1abc9c;
+    opacity: 0;
+    border-radius: var(--bs-border-radius-lg);
+    transition: all 500ms;
+}
+.plus-style{
+    top: 50%;
+    left: 50%;
+    z-index: 7;
+    transform: translate(-50%, -50%);
+    font-size: 96px;
+    opacity: 0;
+    transition: all 500ms;
+}
+.img-bg:hover::after{
+    opacity: .8;
+}
+.img-bg:hover .plus-style{
+    opacity: 1;
+}
